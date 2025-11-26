@@ -5,7 +5,6 @@ A simple full-stack project that lets you explore NASA’s **Astronomy Picture o
 - Dashboard (Today’s APOD)
 - Date picker to view past APODs
 - Gallery of recent APOD images
-- Detailed modal for each image
 - Fully responsive UI
 - Spring Boot backend with caching & NASA API integration
 
