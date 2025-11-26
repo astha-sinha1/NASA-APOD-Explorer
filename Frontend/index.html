@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA APOD Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="logo">🚀 NASA APOD Explorer</h1>
+    <nav>
+        <button id="todayBtn" class="nav-btn active">Today's APOD</button>
+        <button id="galleryBtn" class="nav-btn">Gallery</button>
+    </nav>
+</header>
+
+<main id="dashboard" class="container">
+    <section class="apod-section fade-in">
+        <div class="apod-card left-card">
+            <div class="apod-text">
+                <h2 id="apodTitle">Astronomy Picture of the Day</h2>
+                <p id="apodDate" class="apod-date"></p>
+                <p id="apodExplanation" class="apod-explanation"></p>
+                <p id="apodCopyright"></p>
+            </div>
+
+            <div class="date-picker">
+                <input type="date" id="dateInput">
+                <button id="fetchDateBtn" class="btn">Get APOD</button>
+            </div>
+        </div>
+
+
+        <div class="apod-card right-card">
+            <div id="apodMedia" class="media-box">
+                <div class="loader"></div>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<section id="gallery" class="container hidden">
+    <h2 class="section-title">Recent Images</h2>
+    <div id="galleryGrid" class="gallery-grid"></div>
+</section>
+
+<div id="modal" class="modal hidden">
+    <div class="modal-content fade-in">
+        <button id="modalClose" class="modal-close">✕</button>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDate" class="modal-date"></p>
+        <div id="modalMedia"></div>
+        <p id="modalExplanation"></p>
+        <p id="modalCopyright"></p>
+    </div>
+</div>
+
+<div id="pageLoader" class="page-loader">
+    <div class="loader"></div>
+</div>
+
+<div id="galleryPreview" class="gallery-preview hidden">
+    <button class="preview-close" id="previewClose">✕</button>
+    <h2 id="previewTitle"></h2>
+    <p id="previewDate"></p>
+    <img id="previewImage">
+    <p id="previewDescription"></p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
